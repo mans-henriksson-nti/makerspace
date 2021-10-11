@@ -1,4 +1,58 @@
-.background {
-    background-image: url('bakgrund.jpg');
-    margin: auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-image: url("bakgrund.jpg");
+  background-size: cover;
+}
+
+header {
+  
+
+  background-color: #ffffff;
+
+  padding: 10px;
+
+  text-align: center;
+}
+
+.title {
+    position: relative;
+
+    margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 5vh;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 8vh;
+}
+
+#msLogo {
+  position: absolute;
+  border-radius: 20px;
+  max-width: 12vh;
+
+  left: 10px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0px;
+  bottom: 0px;
+}
+
+nav {
+  display: flex;
+}
+
+.navItem {
+    flex-grow: 1;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 * {
   margin: 0;
@@ -33,6 +34,10 @@ h1 {
   font-size: 8vh;
 }
 
+h3 {
+  font-weight: 500;
+}
+
 #msLogo {
   border-radius: 20px;
   max-width: 12vh;
@@ -43,16 +48,41 @@ h1 {
 }
 
 nav {
-  display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   margin-top: 0px;
+  padding: 0px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.navContainer {
+  background-color: #ffffff;
+  display: flex;
+  padding: 10px;
 }
 
 .navItem {
   flex-grow: 1;
   border-right: 1px solid #c0c0c0;
+  padding: 0px 10px;
+}
+
+.navP {
+  height: 40px;
+  line-height: 40px;
+}
+
+.navP:hover {
+  background-color: #f0f0f0;
+}
+
+.gradient {
+  background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%);
+  height: 20px;
 }
 
 #rightmostItem {
@@ -101,4 +131,31 @@ article {
   padding: 20px;
   flex: 1;
   font-size: 3vh;
+}
+
+footer {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.footerName {
+  text-align: right;
+}
+
+.material-icons-round {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 }

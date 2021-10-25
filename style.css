@@ -8,30 +8,33 @@
   font-family: "Poppins";
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background-image: url("bakgrund.jpg");
   background-size: cover;
 }
 
-.header {
-  background-color: #ffffff;
-  padding: 10px;
-  text-align: center;
-}
-
 header {
+  background-color: #ffffff;
+  padding: 1vw;
+  text-align: center;
   position: relative;
   border-bottom: 1px solid #c0c0c0;
+  height: 25vh;
 }
 
 h2 {
   font-weight: 200;
-  font-size: 5vh;
+  font-size: 3vw;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 8vh;
+  font-size: 4vw;
 }
 
 h3 {
@@ -39,12 +42,12 @@ h3 {
 }
 
 #msLogo {
-  border-radius: 20px;
-  max-width: 12vh;
+  border-radius: 2vw;
+  max-height: 8vw;
   position: absolute;
-  left: 20px;
-  top: 20px;
-  bottom: 0px;
+  left: 2vw;
+  top: 2vw;
+  bottom: 2vw;
 }
 
 nav {
@@ -72,8 +75,8 @@ nav {
 }
 
 .navP {
-  height: 40px;
-  line-height: 40px;
+  height: 6vh;
+  line-height: 6vh;
 }
 
 .navP:hover {
@@ -91,14 +94,8 @@ nav {
 
 article {
   max-width: 80%;
+  max-height: 80vw;
   margin: 100px auto;
-}
-
-.artext {
-  background-color: #ffffff;
-  padding: 20px;
-  font-size: 3vh;
-  border-radius: 20px;
 }
 
 .artimage {
@@ -130,7 +127,7 @@ article {
   background-color: #ffffff;
   padding: 20px;
   flex: 1;
-  font-size: 3vh;
+  font-size: 1.8vw;
 }
 
 footer {
@@ -140,6 +137,11 @@ footer {
 
 .contact {
   text-align: center;
+}
+
+.contactFlex {
+  display: inline-flex;
+  align-items: center;
 }
 
 .footerName {

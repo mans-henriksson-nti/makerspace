@@ -24,7 +24,7 @@ header {
   text-align: center;
   position: relative;
   border-bottom: 1px solid #c0c0c0;
-  height: 25vh;
+  height: 15vw;
 }
 
 h2 {
@@ -51,7 +51,6 @@ h3 {
 }
 
 nav {
-  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   margin-top: 0px;
@@ -75,8 +74,8 @@ nav {
 }
 
 .navP {
-  height: 6vh;
-  line-height: 6vh;
+  
+  font-size: 1.6vw;
 }
 
 .navP:hover {
@@ -94,13 +93,10 @@ nav {
 
 article {
   max-width: 80%;
-  max-height: 80vw;
-  margin: 100px auto;
-}
-
-.artimage {
+  min-height: 20vh;
   display: flex;
-  max-height: 400;
+  
+  margin: 5vw auto;
 }
 
 .articleLeft{
@@ -125,9 +121,13 @@ article {
 
 .articleText {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 2vw;
   flex: 1;
-  font-size: 1.8vw;
+  
+}
+
+.artP {
+  font-size: 2.5vh;
 }
 
 footer {

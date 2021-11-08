@@ -5,45 +5,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>NTI Makerspace - Om Makerspace</title>
+    <title>NTI Makerspace - Start</title>
   </head>
+
   <body>
     <header class="header">
-      <h2>NTIGymnasiet Stockholm</h2>
-      <h1>Makerspace</h1>
-      <img id="msLogo" src="ms_logo.png" alt="Makerspace logo" />
+      <h2>
+        <a href="https://www.ntigymnasiet.se/stockholm/" target="_blank">
+          NTIGymnasiet Stockholm
+        </a>
+      </h2>
+      <h1>
+        <a
+          href="https://sv.wikipedia.org/wiki/Makerr%C3%B6relsen"
+          target="_blank"
+        >
+          Makerspace
+        </a>
+      </h1>
+      <a href="index.html"
+        ><img id="msLogo" src="ms_logo.png" alt="Makerspace logo"
+      /></a>
     </header>
 
-    <nav class="header">
-      <ul class="navItem">
-        <p>Start</p>
-      </ul>
-      <ul class="navItem">
-        <p>Om makerspace</p>
-      </ul>
-      <ul class="navItem">
-        <p>Bli medlem</p>
-      </ul>
-      <ul class="navItem" id="rightmostItem">
-        <p>Rådet</p>
-      </ul>
+    <nav class="nav">
+      <div class="navContainer">
+        <ul class="navItem">
+          <a href="index.html">
+            <p class="navP">Start</p>
+          </a>
+        </ul>
+        <ul class="navItem">
+          <a href="omMakerspace.html">
+            <p class="navP" id="currentPage">Om Makerspace</p>
+          </a>
+        </ul>
+        <ul class="navItem">
+          <a href="bliMedlem.html">
+            <p class="navP">Bli medlem</p>
+          </a>
+        </ul>
+        <ul class="navItem" id="rightmostItem">
+          <a href="index.html">
+            <p class="navP">Rådet</p>
+          </a>
+        </ul>
+      </div>
+      <div class="gradient"></div>
     </nav>
 
-    <article class="artimage">
+    <article class="artImage">
       <div class="articleImage">
         <img
-          class="articleImg articleLeft"
+          class="articleImg"
           src="makerspace_1.jpg"
           alt="Makerspace interior"
         />
       </div>
 
-      <div class="articleText articleRight">
-        <p>
-          Makerspace är ett utrymme där alla elever får utveckla sin kreativitet
-          och skapande förmåga.
+      <div class="articleText">
+        <p class="artP">
+          I Makerspace finns många verktyg för att skapa, men det som lockar
+          flest är nog ändå 3D-skrivarna. Vi har sex stycken Prusa i3 MK3s, två
+          Ultimaker 2+ och två Ultimaker 3. Den sistnämnde kan skriva ut med 2
+          färger. För att få använda skrivarna måste man ta en kort kurs på en
+          eftermiddag, även om man redan vet hur en printer fungerar. Sedan får
+          man en namnskylt som man använder som körkort, och för att andra ska
+          se vem som använder skrivaren. Filament (materialet man använder) är
+          helt gratis under en viss tidsgräns.
         </p>
       </div>
     </article>
+
+    <article class="artImage">
+      <div class="articleText">
+        <p class="artP">
+          I Makerspace har vi tillgång till massvis med elektronikutrustning för
+          att till exempel bygga robotar med Arduinos. Vi har en mängd motorer
+          och batterier, och även mindre elektronik till breadboards. Allt från
+          resistorer och transistorer till strömbrytare och joysticks finns i
+          makerspace. Runt om i rummet finns också flera elektronik-kits för att
+          bygga robotarmar och små robotar som följer linjer.
+        </p>
+      </div>
+
+      <div class="articleImage">
+        <img
+          class="articleImg"
+          src="makerspace_2.jpg"
+          alt="Makerspace interior"
+        />
+      </div>
+    </article>
+
+    <article class="artImage">
+      <div class="articleImage">
+        <img
+          class="articleImg"
+          src="makerspace_1.jpg"
+          alt="Makerspace interior"
+        />
+      </div>
+
+      <div class="articleText">
+        <p class="artP">
+          Om inte 3D-skrivare och elektronik lockar så har vi andra skapande
+          redskap. Med vinylskäraren kan man skära ut nästan vilka former som
+          helst i vinyl för att göra klistermärken. Det finns många färger och
+          det är gratis att använda, men man behöver gå en kort kurs för att
+          använda den. T-shirt-pressen används sällan, men det går jättebra att
+          applicera tryck på kläder och tyger med den. Till sist har vi också en
+          symaskin som kan sy komplicerade mönster och bilder automatiskt.
+        </p>
+      </div>
+    </article>
+
+    <footer>
+      <div class="contact">
+        <h3>Kontakt</h3>
+        <p class="contactFlex">
+          <span class="material-icons-round"> email </span>
+          <a href="mailto:anna.lundh@ga.ntig.se"
+            ><u>Anna.Lundh@ga.ntig.se</u></a
+          >
+        </p>
+        <br />
+        <p class="contactFlex">
+          <span class="material-icons-round"> link </span>
+          <a href="https://discord.gg/sMq5VR4tZP" target="_blank"
+            ><u>Discord-server</u></a
+          >
+        </p>
+      </div>
+      <p class="footerName">Måns Henriksson 2021®</p>
+    </footer>
   </body>
 </html>

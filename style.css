@@ -24,17 +24,16 @@ header {
   text-align: center;
   position: relative;
   border-bottom: 1px solid #c0c0c0;
-  height: 15vw;
 }
 
 h2 {
   font-weight: 200;
-  font-size: 3vw;
+  font-size: min(4vh, 5vw);
 }
 
 h1 {
   font-weight: 300;
-  font-size: 4vw;
+  font-size: min(6vh, 9vw);
 }
 
 h3 {
@@ -42,8 +41,8 @@ h3 {
 }
 
 #msLogo {
-  border-radius: 2vw;
-  max-height: 8vw;
+  border-radius: 2vh;
+  height: min(10vh, 15vw);
   position: absolute;
   left: 2vw;
   top: 2vw;
@@ -64,18 +63,24 @@ nav {
 .navContainer {
   background-color: #ffffff;
   display: flex;
-  padding: 10px;
+  flex-wrap: wrap;
+  padding: 0px 10px;
 }
 
 .navItem {
   flex-grow: 1;
   border-right: 1px solid #c0c0c0;
+  border-left: 1px solid #c0c0c0;
   padding: 0px 10px;
+  margin: 10px 0px;
 }
 
 .navP {
-  
-  font-size: 1.6vw;
+  font-size: 3vh;
+}
+
+#currentPage {
+  color: #a0a0a0;
 }
 
 .navP:hover {
@@ -87,30 +92,16 @@ nav {
   height: 20px;
 }
 
-#rightmostItem {
-  border-right: none;
-}
-
-article {
-  max-width: 80%;
-  min-height: 20vh;
+.artImage {
+  width: 80%;
   display: flex;
-  
+  flex-wrap: wrap;
   margin: 5vw auto;
 }
 
-.articleLeft{
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.articleRight{
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-} 
-
 .articleImage {
   flex: 2;
+  min-width: 200px;
 }
 
 .articleImg {
@@ -123,7 +114,7 @@ article {
   background-color: #ffffff;
   padding: 2vw;
   flex: 1;
-  
+  min-width: 200px;
 }
 
 .artP {
@@ -146,6 +137,7 @@ footer {
 
 .footerName {
   text-align: right;
+  font-size: 2vh;
 }
 
 .material-icons-round {

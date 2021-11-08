@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  font-size: 3vh;
 }
 
 a, a:hover, a:focus, a:active {
@@ -97,6 +98,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 5vw auto;
+  
+  overflow: hidden;
+  border-radius: 2vh;
 }
 
 .articleImage {

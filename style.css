@@ -134,6 +134,19 @@ nav {
   font-size: 2.5vh;
 }
 
+.discordBox {
+  display: flex;
+  justify-content: center;
+  height: min(10vh, 15vw);
+  background-color: #7289da;
+  color: #ffffff;
+  padding: 2vw;
+  font-size: 4vh;
+  line-height: 4vh;
+  margin: 5vw auto;
+  border-radius: 2vh;
+}
+
 footer {
   background-color: #ffffff;
   padding: 10px;

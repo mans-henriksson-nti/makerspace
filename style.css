@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
-  font-size: 3vh;
+  
 }
 
 a, a:hover, a:focus, a:active {
@@ -34,7 +34,7 @@ h2 {
 
 h1 {
   font-weight: 300;
-  font-size: min(6vh, 9vw);
+  font-size: min(7vh, 9vw);
 }
 
 h3 {
@@ -91,6 +91,15 @@ nav {
 .gradient {
   background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%);
   height: 20px;
+}
+
+.textBox {
+  width: 80%;
+  background-color: #ffffff;
+  padding: 2vw;
+  font-size: 2.5vh;
+  margin: 5vw auto;
+  border-radius: 2vh;
 }
 
 .artImage {

@@ -70,6 +70,7 @@ nav {
 
 .navItem {
   flex-grow: 1;
+  list-style: none;
   border-right: 1px solid #c0c0c0;
   border-left: 1px solid #c0c0c0;
   padding: 0px 10px;

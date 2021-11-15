@@ -137,13 +137,35 @@ nav {
 .discordBox {
   display: flex;
   justify-content: center;
-  height: min(10vh, 15vw);
+  align-items: center;
   background-color: #7289da;
   color: #ffffff;
   padding: 2vw;
-  font-size: 4vh;
+  font-size: min(4vh, 4vw);
   line-height: 4vh;
-  margin: 5vw auto;
+  margin: auto;
+  border-radius: 2vh;
+}
+
+.textP {
+  margin-bottom: 2vh;
+}
+
+.discordLogo {
+  height: min(6vh, 5vw);
+  margin: 0 2vw;
+}
+
+.rådLista {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
+.rådMedlem {
+  background-color: #ffffff;
+  padding: 2vw;
+  font-size: 2.5vh;
   border-radius: 2vh;
 }
 

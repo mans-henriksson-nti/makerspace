@@ -158,15 +158,23 @@ nav {
 
 .rådLista {
   display: flex;
-  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5vw auto;
   width: 80%;
 }
 
 .rådMedlem {
   background-color: #ffffff;
-  padding: 2vw;
+  padding: 1.5vw;
   font-size: 2.5vh;
   border-radius: 2vh;
+  margin: 1vh;
+}
+
+h4 {
+  font-size: 3vh;
+
 }
 
 footer {

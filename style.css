@@ -50,6 +50,15 @@ h3 {
   bottom: 2vw;
 }
 
+#skrivare {
+  border-radius: 2vh;
+  height: min(10vh, 15vw);
+  position: absolute;
+  right: 2vw;
+  top: 2vw;
+  bottom: 2vw;
+}
+
 nav {
   position: sticky;
   top: 0px;

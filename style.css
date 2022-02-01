@@ -184,7 +184,31 @@ nav {
 
 h4 {
   font-size: 3vh;
+}
 
+section {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0.5em;
+  width: 90%;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template: repeat(5, 1fr) / 1fr 1fr;
+}
+
+@media (min-width: 992px) {
+  .gridContainer {
+    grid-template: 1fr 1fr / repeat(5, 1fr);
+  }
+}
+
+.gridContent {
+  background-color: #c0c0c0;
+  text-align: center;
+  margin: 0.5em;
+  height: 20em;
 }
 
 footer {

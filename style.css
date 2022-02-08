@@ -6,10 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
-  
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -99,7 +101,11 @@ nav {
 }
 
 .gradient {
-  background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
   height: 20px;
 }
 
@@ -117,7 +123,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   margin: 5vw auto;
-  
+
   overflow: hidden;
   border-radius: 2vh;
 }
@@ -196,33 +202,47 @@ section {
 .gridContainer {
   display: grid;
   grid-template: repeat(5, 1fr) / 1fr 1fr;
+  font-size: 3vw;
 }
 
 @media (min-width: 992px) {
   .gridContainer {
     grid-template: 1fr 1fr / repeat(5, 1fr);
+    font-size: 2vh;
   }
 }
 
 .printer {
-  background-color: #c0c0c0;
+  background-color: #e0e0e0;
   text-align: center;
   margin: 0.5em;
   height: 20em;
 }
 
 .printerStatus {
-  background-color: rgb(128, 255, 96);
   font-size: 2em;
+  color: white;
+}
+
+.green {
+  background-color: rgb(38, 253, 18);
+}
+
+.blue {
+  background-color: rgb(255, 217, 0);
+}
+
+.red {
+  background-color: rgb(252, 65, 27);
 }
 
 .printerName {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
 }
 
 .printerType {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
@@ -246,10 +266,10 @@ footer {
 }
 
 .material-icons-round {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;

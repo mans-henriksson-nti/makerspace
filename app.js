@@ -51,13 +51,15 @@ let printers = [
     },
 ];
 
-function displayPrinter(printers) {
+let queueList = [["hej", "då"],[],["kebab", "pizza", "la", "grande"],[],[],[],["poggers"],[],[],[]];
+
+function displayPrinter(printer, index) {
     let newPrinter = document.createElement("div");
     newPrinter.classList.add("printer");
 
     let newStatus = document.createElement("div");
     newStatus.classList.add("printerStatus");
-    switch (printers.status) {
+    switch (printer.status) {
         case 0:
             newStatus.innerHTML = "Ledig";
             newStatus.classList.add("green");
@@ -78,13 +80,24 @@ function displayPrinter(printers) {
 
     let newName = document.createElement("h1");
     newName.classList.add("printerName");
-    newName.innerHTML = printers.name;
+    newName.innerHTML = printer.name;
     newPrinter.append(newName);
 
     let newType = document.createElement("h2");
     newType.classList.add("printerType");
-    newType.innerHTML = printers.type;
+    newType.innerHTML = printer.type;
     newPrinter.append(newType);
+
+    let newList = document.createElement("ul");
+    newList.classList.add("printerList");
+    newPrinter.append(newList);
+
+    for (let i = 0; i < queueList[index].length; i++) {
+        let queueEntry = document.createElement("p");
+        queueEntry.classList.add("queueEntry");
+        queueEntry.innerHTML = queueList[index][i];
+        newList.append(queueEntry);
+    }
 
     return newPrinter;
 }
@@ -92,5 +105,5 @@ function displayPrinter(printers) {
 let main = document.querySelector(".gridContainer");
 
 for (let i = 0; i < printers.length; i++) {
-    main.append(displayPrinter(printers[i]));
+    main.append(displayPrinter(printers[i], i));
 }

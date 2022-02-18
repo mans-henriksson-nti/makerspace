@@ -21,12 +21,20 @@
       </a>
     </header>
     <section>
-      <div class="actionBar">
-        <button class="actionButton">Placera namnskylt</button>
-        <button class="actionButton">Ta bort namnskylt</button>
-        <button class="actionButton">Ändra prinerns status</button>
-      </div>
+      <label>Namn:
+        <input type="text" placeholder="Skriv ditt namn...">
+      </label>
+      <label>Discord-tagg:
+        <input type="text" placeholder="Wumpus#1234">
+      </label>
+
       <div class="gridContainer"></div>
+
+      <select data-printer-status data-printer="Per">
+        <option value="0">Ledig</option>
+        <option value="1">Printar...</option>
+        <option value="2">Ur funktion</option>
+      </select>
     </section>
   </body>
 </html>

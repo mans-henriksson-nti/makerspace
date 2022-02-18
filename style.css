@@ -245,6 +245,7 @@ section {
 .printerStatus {
   font-size: 2em;
   color: white;
+  width: 100%;
 }
 
 .green {
@@ -269,17 +270,18 @@ section {
   font-weight: 300;
 }
 
-.printerButtonContainer {
+.printerContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: 100%;
 }
 
 .printerAddButton {
   font-size: 1em;
   width: 5em;
+  justify-self: flex-end;
 }
 
 footer {

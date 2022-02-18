@@ -68,6 +68,10 @@ function displayPrinter(printer, index) {
   let newPrinter = document.createElement("div");
   newPrinter.classList.add("printer");
 
+  let newContainer = document.createElement("div");
+  newContainer.classList.add("printerContainer");
+  newPrinter.append(newContainer);
+
   let newStatus = document.createElement("div");
   newStatus.classList.add("printerStatus");
   switch (printer.status) {
@@ -87,21 +91,21 @@ function displayPrinter(printer, index) {
     default:
       break;
   }
-  newPrinter.append(newStatus);
+  newContainer.append(newStatus);
 
   let newName = document.createElement("h1");
   newName.classList.add("printerName");
   newName.innerHTML = printer.name;
-  newPrinter.append(newName);
+  newContainer.append(newName);
 
   let newType = document.createElement("h2");
   newType.classList.add("printerType");
   newType.innerHTML = printer.type;
-  newPrinter.append(newType);
+  newContainer.append(newType);
 
   let newList = document.createElement("ul");
   newList.classList.add("printerList");
-  newPrinter.append(newList);
+  newContainer.append(newList);
 
   for (let i = 0; i < queueList[index].length; i++) {
     let queueEntry = document.createElement("p");
@@ -110,14 +114,10 @@ function displayPrinter(printer, index) {
     newList.append(queueEntry);
   }
 
-  let newButtonContainer = document.createElement("div");
-  newButtonContainer.classList.add("printerButtonContainer");
-  newPrinter.append(newButtonContainer);
-  
   let newAddButton = document.createElement("button");
   newAddButton.classList.add("printerAddButton");
   newAddButton.innerHTML = "+";
-  newButtonContainer.append(newAddButton);
+  newContainer.append(newAddButton);
 
   return newPrinter;
 }

@@ -206,14 +206,8 @@ section {
   font-size: 3vw;
 }
 
-.actionBar {
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr;
-}
-
-.actionButton {
-  margin: 0.5rem;
-  font-size: 2em;
+label {
+  margin: 0.5em;
 }
 
 .gridContainer {
@@ -239,7 +233,6 @@ section {
   background-color: #e0e0e0;
   text-align: center;
   margin: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 .printerStatus {
@@ -249,15 +242,15 @@ section {
 }
 
 .green {
-  background-color: rgb(38, 253, 18);
+  background-color: var(--printer-status-vacant);
 }
 
 .blue {
-  background-color: rgb(255, 217, 0);
+  background-color: var(--printer-status-printing);
 }
 
 .red {
-  background-color: rgb(252, 65, 27);
+  background-color: var(--printer-status-out-of-order);
 }
 
 .printerName {
@@ -280,8 +273,9 @@ section {
 
 .printerAddButton {
   font-size: 1em;
-  width: 5em;
-  justify-self: flex-end;
+  width: 2em;
+  margin: 0.5em;
+  margin-top: auto;
 }
 
 footer {

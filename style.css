@@ -274,6 +274,14 @@ input {
 
 .printerList {
   margin-bottom: 0.5em;
+  padding: 0 0.5em;
+  width: 100%;
+}
+
+.queueEntry {
+  border: solid #c0c0c0 1px;
+  margin: 00.5em 0;
+  
 }
 
 .printerAddButton {

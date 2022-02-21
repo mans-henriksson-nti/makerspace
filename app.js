@@ -52,17 +52,20 @@ let printers = [
 ];
 
 let queueList = [
-  ["hej", "då", "gustaf"],
-  [],
-  ["kebab", "pizza", "la", "grande"],
   [],
   [],
   [],
-  ["poggers"],
+  [],
+  [],
+  [],
+  [],
   [],
   [],
   [],
 ];
+
+const nameInput = document.querySelector(".nameInput"); 
+const discordTagInput = document.querySelector(".discordTagInput"); 
 
 function displayPrinter(printer, index) {
   let newPrinter = document.createElement("div");
@@ -124,10 +127,22 @@ function displayPrinter(printer, index) {
 }
 
 function addToQueue(event) {
-  queueList[event.target.getAttribute("data-printer-index")].push("janette");
-  
-  console.dir(event.target.getAttribute("data-printer-index"));
-  console.dir(queueList[event.target.getAttribute("data-printer-index")][0]);
+  if (nameInput != "" && discordTagInput != "") {
+    queueList[event.target.getAttribute("data-printer-index")].push(nameInput.value + " - " + discordTagInput.value);
+    
+    refreshQueue(printerQueueLists[event.target.getAttribute("data-printer-index")], event.target.getAttribute("data-printer-index"));
+  }
+}
+
+function refreshQueue(queue, index) {
+  queue.innerHTML = "";
+
+  for (let i = 0; i < queueList[index].length; i++) {
+    let queueEntry = document.createElement("p");
+    queueEntry.classList.add("queueEntry");
+    queueEntry.innerHTML = queueList[index][i];
+    queue.append(queueEntry);
+  }
 }
 
 let main = document.querySelector(".gridContainer");
@@ -135,3 +150,5 @@ let main = document.querySelector(".gridContainer");
 for (let i = 0; i < printers.length; i++) {
   main.append(displayPrinter(printers[i], i));
 }
+
+const printerQueueLists = Array.from(document.querySelectorAll(".printerList"));

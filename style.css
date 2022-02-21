@@ -206,10 +206,6 @@ section {
   font-size: 3vw;
 }
 
-label {
-  margin: 0.5em;
-}
-
 .gridContainer {
   display: grid;
   grid-template: repeat(5, 1fr) / 1fr 1fr;
@@ -219,14 +215,19 @@ label {
   section {
     font-size: 2vh;
   }
-
-  .actionBar {
-    grid-template: 1fr / 1fr 1fr 1fr;
-  }
-
   .gridContainer {
     grid-template: 1fr 1fr / repeat(5, 1fr);
   }
+}
+
+label {
+  white-space: nowrap;
+  margin: 0.5em;
+}
+
+input {
+  font-size: inherit;
+  margin: 0.5em;
 }
 
 .printer {
@@ -271,10 +272,18 @@ label {
   height: 100%;
 }
 
+.printerList {
+  margin-bottom: 0.5em;
+}
+
 .printerAddButton {
   font-size: 1em;
   width: 2em;
+  height: 2em;
   margin: 0.5em;
+  background-image: url("plus_icon.svg");
+  background-color:#f0f0f0;
+  border: solid 1px black;
   margin-top: auto;
 }
 

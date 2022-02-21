@@ -114,23 +114,24 @@ function displayPrinter(printer, index) {
     newList.append(queueEntry);
   }
 
-  let newAddButton = document.createElement("button");
+  let newAddButton = document.createElement("div");
   newAddButton.classList.add("printerAddButton");
-  newAddButton.innerHTML = "+";
+  newAddButton.setAttribute("data-printer-index", index);
+  newAddButton.addEventListener("click", addToQueue);
   newContainer.append(newAddButton);
 
   return newPrinter;
+}
+
+function addToQueue(event) {
+  queueList[event.target.getAttribute("data-printer-index")].push("janette");
+  
+  console.dir(event.target.getAttribute("data-printer-index"));
+  console.dir(queueList[event.target.getAttribute("data-printer-index")][0]);
 }
 
 let main = document.querySelector(".gridContainer");
 
 for (let i = 0; i < printers.length; i++) {
   main.append(displayPrinter(printers[i], i));
-}
-
-const printerStatusEl = document.querySelector("[data-printer-status]");
-printerStatusEl.addEventListener("change", reflectPrinterStatusChange);
-
-function reflectPrinterStatusChange(event) {
-  console.log(event.target.value);
 }

@@ -216,7 +216,7 @@ section {
     font-size: 2vh;
   }
   .gridContainer {
-    grid-template: 1fr 1fr / repeat(5, 1fr);
+    grid-template: auto / repeat(5, 1fr);
   }
 }
 

@@ -127,7 +127,7 @@ function displayPrinter(printer, index) {
 }
 
 function addToQueue(event) {
-  if (nameInput != "" && discordTagInput != "") {
+  if (nameInput.value.trim() != "" && discordTagInput.value.trim() != "") {
     queueList[event.target.getAttribute("data-printer-index")].push(nameInput.value + " - " + discordTagInput.value);
     
     refreshQueue(printerQueueLists[event.target.getAttribute("data-printer-index")], event.target.getAttribute("data-printer-index"));

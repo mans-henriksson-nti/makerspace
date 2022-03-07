@@ -51,21 +51,10 @@ let printers = [
   },
 ];
 
-let queueList = [
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-];
+let queueList = [[], [], [], [], [], [], [], [], [], []];
 
-const nameInput = document.querySelector(".nameInput"); 
-const discordTagInput = document.querySelector(".discordTagInput"); 
+const nameInput = document.querySelector(".nameInput");
+const discordTagInput = document.querySelector(".discordTagInput");
 
 function displayPrinter(printer, index) {
   let newPrinter = document.createElement("div");
@@ -111,7 +100,7 @@ function displayPrinter(printer, index) {
   newContainer.append(newList);
 
   for (let i = 0; i < queueList[index].length; i++) {
-    let queueEntry = document.createElement("p");
+    let queueEntry = document.createElement("li");
     queueEntry.classList.add("queueEntry");
     queueEntry.innerHTML = queueList[index][i];
     newList.append(queueEntry);
@@ -128,9 +117,14 @@ function displayPrinter(printer, index) {
 
 function addToQueue(event) {
   if (nameInput.value.trim() != "" && discordTagInput.value.trim() != "") {
-    queueList[event.target.getAttribute("data-printer-index")].push(nameInput.value + " - " + discordTagInput.value);
-    
-    refreshQueue(printerQueueLists[event.target.getAttribute("data-printer-index")], event.target.getAttribute("data-printer-index"));
+    queueList[event.target.getAttribute("data-printer-index")].push(
+      nameInput.value + " - " + discordTagInput.value
+    );
+
+    refreshQueue(
+      printerQueueLists[event.target.getAttribute("data-printer-index")],
+      event.target.getAttribute("data-printer-index")
+    );
   }
 }
 

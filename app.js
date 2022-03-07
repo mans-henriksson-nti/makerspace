@@ -102,7 +102,12 @@ function displayPrinter(printer, index) {
   for (let i = 0; i < queueList[index].length; i++) {
     let queueEntry = document.createElement("li");
     queueEntry.classList.add("queueEntry");
-    queueEntry.innerHTML = queueList[index][i];
+    
+    let queueName = document.createElement("p");
+    queueName.classList.add("queueName");
+    queueName.innerHTML = queueList[index][i];
+    queueEntry.append(queueName);
+    
     newList.append(queueEntry);
   }
 

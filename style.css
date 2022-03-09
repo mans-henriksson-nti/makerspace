@@ -279,9 +279,19 @@ input {
 }
 
 .queueEntry {
+  display: flex;
+  justify-content: space-between;
   border: solid #c0c0c0 1px;
-  margin: 00.5em 0;
-  
+  margin: 0.5em 0;
+  list-style: none;
+}
+
+.queueP {
+  padding: 0 0.2em;
+}
+
+.queueDeleteButton {
+  color: red;
 }
 
 .printerAddButton {

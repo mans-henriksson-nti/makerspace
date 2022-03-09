@@ -99,17 +99,7 @@ function displayPrinter(printer, index) {
   newList.classList.add("printerList");
   newContainer.append(newList);
 
-  for (let i = 0; i < queueList[index].length; i++) {
-    let queueEntry = document.createElement("li");
-    queueEntry.classList.add("queueEntry");
-    
-    let queueName = document.createElement("p");
-    queueName.classList.add("queueName");
-    queueName.innerHTML = queueList[index][i];
-    queueEntry.append(queueName);
-    
-    newList.append(queueEntry);
-  }
+  refreshQueue(newList, index);
 
   let newAddButton = document.createElement("div");
   newAddButton.classList.add("printerAddButton");
@@ -122,7 +112,7 @@ function displayPrinter(printer, index) {
 
 function addToQueue(event) {
   if (nameInput.value.trim() != "" && discordTagInput.value.trim() != "") {
-    queueList[event.target.getAttribute("data-printer-index")].push(
+      queueList[event.target.getAttribute("data-printer-index")].push(
       nameInput.value + " - " + discordTagInput.value
     );
 
@@ -137,9 +127,23 @@ function refreshQueue(queue, index) {
   queue.innerHTML = "";
 
   for (let i = 0; i < queueList[index].length; i++) {
-    let queueEntry = document.createElement("p");
+    let queueEntry = document.createElement("li");
     queueEntry.classList.add("queueEntry");
-    queueEntry.innerHTML = queueList[index][i];
+    
+    let queueName = document.createElement("p");
+    queueName.classList.add("queueName");
+    queueName.classList.add("queueP");
+    queueName.innerHTML = queueList[index][i];
+
+    queueEntry.append(queueName);
+
+    let queueDeleteButton = document.createElement("p");
+    queueDeleteButton.classList.add("queueDeleteButton");
+    queueDeleteButton.classList.add("queueP");
+    queueDeleteButton.innerHTML = "X";
+
+    queueEntry.append(queueDeleteButton);
+
     queue.append(queueEntry);
   }
 }

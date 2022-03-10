@@ -101,8 +101,10 @@ function displayPrinter(printer, index) {
 
   refreshQueue(newList, index);
 
-  let newAddButton = document.createElement("div");
+  let newAddButton = document.createElement("a");
   newAddButton.classList.add("printerAddButton");
+  newAddButton.classList.add("material-icons");
+  newAddButton.innerHTML = "add_circle_outline";
   newAddButton.setAttribute("data-printer-index", index);
   newAddButton.addEventListener("click", addToQueue);
   newContainer.append(newAddButton);
@@ -112,14 +114,30 @@ function displayPrinter(printer, index) {
 
 function addToQueue(event) {
   if (nameInput.value.trim() != "" && discordTagInput.value.trim() != "") {
-      queueList[event.target.getAttribute("data-printer-index")].push(
+    queueList[event.target.getAttribute("data-printer-index")].push(
       nameInput.value + " - " + discordTagInput.value
     );
+    
+    alert(false);
 
     refreshQueue(
       printerQueueLists[event.target.getAttribute("data-printer-index")],
       event.target.getAttribute("data-printer-index")
     );
+  }
+  else {
+    alert(true);
+  }
+}
+
+function alert(alert) {
+  let alertBox = document.getElementById("alertBox");
+
+  if (alert) {
+    alertBox.classList.add("show");
+  }
+  else {
+    alertBox.classList.remove("show");
   }
 }
 
@@ -130,6 +148,15 @@ function refreshQueue(queue, index) {
     let queueEntry = document.createElement("li");
     queueEntry.classList.add("queueEntry");
     
+    let queueCopyButton = document.createElement("span");
+    queueCopyButton.classList.add("queueButton");
+    queueCopyButton.classList.add("queueP");
+    queueCopyButton.classList.add("material-icons");
+    queueCopyButton.addEventListener("click", copyName);
+    queueCopyButton.innerHTML = "content_copy";
+
+    queueEntry.append(queueCopyButton);
+    
     let queueName = document.createElement("p");
     queueName.classList.add("queueName");
     queueName.classList.add("queueP");
@@ -137,16 +164,21 @@ function refreshQueue(queue, index) {
 
     queueEntry.append(queueName);
 
-    let queueDeleteButton = document.createElement("p");
-    queueDeleteButton.classList.add("queueDeleteButton");
+    let queueDeleteButton = document.createElement("span");
+    queueDeleteButton.classList.add("queueButton");
     queueDeleteButton.classList.add("queueP");
-    queueDeleteButton.innerHTML = "X";
+    queueDeleteButton.classList.add("material-icons");
+    queueDeleteButton.innerHTML = "clear";
 
     queueEntry.append(queueDeleteButton);
 
     queue.append(queueEntry);
   }
 }
+
+/* function copyName(event) {
+  document.execCommand('copy')
+} */
 
 let main = document.querySelector(".gridContainer");
 

@@ -30,13 +30,15 @@
         <input class="discordTagInput" type="text" placeholder="Wumpus#1234">
       </label>
 
-      <div class="gridContainer"></div>
+      <div id="alertBox">
+        <p>
+          <span class="material-icons alertIcon">warning</span>
+          <span>Se till att skriva in både namn och Discord-tagg</span>
+          <span class="material-icons alertIcon">warning</span>
+        </p>
+      </div>
 
-      <select data-printer-status data-printer="Per">
-        <option value="0">Ledig</option>
-        <option value="1">Printar...</option>
-        <option value="2">Ur funktion</option>
-      </select>
+      <div class="gridContainer"></div>
     </section>
   </body>
 </html>

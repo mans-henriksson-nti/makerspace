@@ -230,6 +230,22 @@ input {
   margin: 0.5em;
 }
 
+#alertBox {
+  display: none;
+  padding: 0.2em;
+  margin: 0.5em;
+  background-color: var(--printer-status-out-of-order);
+  color: white;
+}
+
+.alertIcon {
+  margin: 0 0.2em;
+}
+
+.show {
+  display: inline-block !important;
+}
+
 .printer {
   background-color: #e0e0e0;
   text-align: center;
@@ -286,23 +302,28 @@ input {
   list-style: none;
 }
 
-.queueP {
-  padding: 0 0.2em;
+.queueEntry:hover .queueButton {
+  display: block;
 }
 
-.queueDeleteButton {
-  color: red;
+.queueName {
+  width: 100%;
+  padding: 0.2em;
+}
+
+.queueButton {
+  display: none;
+  padding: 0.2em;
+  font-size: 1.3em;
+  width: 1.4em;
+  cursor: pointer;
 }
 
 .printerAddButton {
-  font-size: 1em;
-  width: 2em;
-  height: 2em;
-  margin: 0.5em;
-  background-image: url("plus_icon.svg");
-  background-color:#f0f0f0;
-  border: solid 1px black;
+  font-size: 2em !important;
   margin-top: auto;
+  margin-bottom: 0.2em;
+  cursor: pointer;
 }
 
 footer {
@@ -324,11 +345,11 @@ footer {
   font-size: 2vh;
 }
 
-.material-icons-round {
+.material-icons {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 1.5em;
   display: inline-block;
   line-height: 1;
   text-transform: none;

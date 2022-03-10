@@ -152,35 +152,47 @@ function refreshQueue(queue, index) {
     queueCopyButton.classList.add("queueButton");
     queueCopyButton.classList.add("queueP");
     queueCopyButton.classList.add("material-icons");
-    queueCopyButton.addEventListener("click", copyName);
+    queueCopyButton.setAttribute("data-printer-index", index);
+    queueCopyButton.setAttribute("data-queue-index", i);
     queueCopyButton.innerHTML = "content_copy";
-
+    
     queueEntry.append(queueCopyButton);
     
     let queueName = document.createElement("p");
     queueName.classList.add("queueName");
     queueName.classList.add("queueP");
     queueName.innerHTML = queueList[index][i];
-
+    
     queueEntry.append(queueName);
-
+    
     let queueDeleteButton = document.createElement("span");
     queueDeleteButton.classList.add("queueButton");
     queueDeleteButton.classList.add("queueP");
     queueDeleteButton.classList.add("material-icons");
+    queueDeleteButton.setAttribute("data-printer-index", index);
+    queueDeleteButton.setAttribute("data-queue-index", i);
     queueDeleteButton.innerHTML = "clear";
-
+    
     queueEntry.append(queueDeleteButton);
+    
+    queueCopyButton.addEventListener("click", copyName);
+    queueDeleteButton.addEventListener("click", deleteEntry);
 
     queue.append(queueEntry);
   }
 }
 
-/* function copyName(event) {
-  document.execCommand('copy')
-} */
+function copyName(event) {
+  navigator.clipboard.writeText(queueList[event.target.getAttribute("data-printer-index")][event.target.getAttribute("data-queue-index")]);
+}
 
-let main = document.querySelector(".gridContainer");
+function deleteEntry(event) {
+  event.target.getAttribute("data-printer-index")
+  queueList[event.target.getAttribute("data-printer-index")].splice(event.target.getAttribute("data-queue-index"), 1);
+  refreshQueue(printerQueueLists[event.target.getAttribute("data-printer-index")], event.target.getAttribute("data-printer-index"));
+}
+
+let main = document.querySelector(".flexContainer");
 
 for (let i = 0; i < printers.length; i++) {
   main.append(displayPrinter(printers[i], i));

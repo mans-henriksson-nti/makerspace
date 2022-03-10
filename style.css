@@ -203,21 +203,18 @@ section {
   margin: auto;
   padding: 0.5em;
   width: 90%;
-  font-size: 3vw;
+  font-size: 0.8em;
 }
 
-.gridContainer {
-  display: grid;
-  grid-template: repeat(5, 1fr) / 1fr 1fr;
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 992px) {
-  section {
-    font-size: 2vh;
-  }
-  .gridContainer {
-    grid-template: auto / repeat(5, 1fr);
-  }
+.printer {
+  flex-grow: 1;
+  min-width: 250px;
+  flex-basis: 0;
 }
 
 label {
@@ -238,8 +235,10 @@ input {
   color: white;
 }
 
-.alertIcon {
+.exclamate {
   margin: 0 0.2em;
+  font-weight: bolder;
+  font-size: 1.4em;
 }
 
 .show {

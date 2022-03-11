@@ -201,6 +201,7 @@ h4 {
 section {
   background-color: #ffffff;
   margin: auto;
+  margin-bottom: 2em;
   padding: 0.5em;
   width: 90%;
   font-size: 0.8em;
@@ -224,6 +225,7 @@ label {
 
 input {
   font-size: inherit;
+  max-width: 12em;
   margin: 0.5em;
 }
 
@@ -299,6 +301,7 @@ input {
   border: solid #c0c0c0 1px;
   margin: 0.5em 0;
   list-style: none;
+  align-items: center;
 }
 
 .queueEntry:hover .queueButton {
@@ -306,15 +309,16 @@ input {
 }
 
 .queueName {
-  width: 100%;
+  width: 75%;
   padding: 0.2em;
+  word-wrap: break-word;
 }
 
 .queueButton {
   display: none;
   padding: 0.2em;
   font-size: 1.3em;
-  width: 1.4em;
+  width: auto 1.4em;
   cursor: pointer;
 }
 
@@ -328,6 +332,8 @@ input {
 footer {
   background-color: #ffffff;
   padding: 10px;
+  width: 100%;
+  bottom: 0;
 }
 
 .contact {

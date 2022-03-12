@@ -101,11 +101,12 @@ function displayPrinter(printer, index) {
 
   refreshQueue(newList, index);
 
-  let newAddButton = document.createElement("a");
+  let newAddButton = document.createElement("button");
   newAddButton.classList.add("printerAddButton");
   newAddButton.classList.add("material-icons");
   newAddButton.innerHTML = "add_circle_outline";
   newAddButton.setAttribute("data-printer-index", index);
+  newAddButton.setAttribute("tab-index", 0);
   newAddButton.addEventListener("click", addToQueue);
   newContainer.append(newAddButton);
 
@@ -148,9 +149,8 @@ function refreshQueue(queue, index) {
     let queueEntry = document.createElement("li");
     queueEntry.classList.add("queueEntry");
     
-    let queueCopyButton = document.createElement("span");
+    let queueCopyButton = document.createElement("button");
     queueCopyButton.classList.add("queueButton");
-    queueCopyButton.classList.add("queueP");
     queueCopyButton.classList.add("material-icons");
     queueCopyButton.setAttribute("data-printer-index", index);
     queueCopyButton.setAttribute("data-queue-index", i);
@@ -160,14 +160,12 @@ function refreshQueue(queue, index) {
     
     let queueName = document.createElement("p");
     queueName.classList.add("queueName");
-    queueName.classList.add("queueP");
     queueName.innerHTML = queueList[index][i];
     
     queueEntry.append(queueName);
     
-    let queueDeleteButton = document.createElement("span");
+    let queueDeleteButton = document.createElement("button");
     queueDeleteButton.classList.add("queueButton");
-    queueDeleteButton.classList.add("queueP");
     queueDeleteButton.classList.add("material-icons");
     queueDeleteButton.setAttribute("data-printer-index", index);
     queueDeleteButton.setAttribute("data-queue-index", i);

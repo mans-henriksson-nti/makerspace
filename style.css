@@ -16,15 +16,24 @@
 
 a,
 a:hover,
-a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
 }
 
+:focus {
+  outline: 3px solid;
+  border-radius: 3px;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("bakgrund.webp");
   background-size: cover;
+  height: 100%;
 }
 
 header {
@@ -49,22 +58,39 @@ h3 {
   font-weight: 500;
 }
 
-#msLogo {
+button {
+  border: none;
+  background-color: inherit;
+}
+
+#msLogoLink {
   border-radius: 2vh;
   height: min(10vh, 15vw);
   position: absolute;
   left: 2vw;
   top: 2vw;
   bottom: 2vw;
+  overflow: hidden;
 }
 
-#skrivare {
+#msLogo {
+  width: 100%;
+  height: 100%;
+}
+
+#printersLogoLink {
   border-radius: 2vh;
   height: min(10vh, 15vw);
   position: absolute;
   right: 2vw;
   top: 2vw;
   bottom: 2vw;
+  overflow: hidden;
+}
+
+#printersLogo {
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -200,8 +226,7 @@ h4 {
 
 section {
   background-color: #ffffff;
-  margin: auto;
-  margin-bottom: 2em;
+  margin: 2em auto;
   padding: 0.5em;
   width: 90%;
   font-size: 0.8em;
@@ -289,6 +314,13 @@ input {
   height: 100%;
 }
 
+.printerAddButton {
+  font-size: 2em !important;
+  margin-top: auto;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+}
+
 .printerList {
   margin-bottom: 0.5em;
   padding: 0 0.5em;
@@ -297,15 +329,15 @@ input {
 
 .queueEntry {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border: solid #c0c0c0 1px;
-  margin: 0.5em 0;
+  margin: 0;
   list-style: none;
   align-items: center;
 }
 
-.queueEntry:hover .queueButton {
-  display: block;
+.queueEntry:first-child {
+  background-color: #f0f0f0;
 }
 
 .queueName {
@@ -314,26 +346,29 @@ input {
   word-wrap: break-word;
 }
 
+@media (hover: none) {
+  .queueButton {
+    display: block !important;
+  }
+}
+
+.queueEntry:hover .queueButton{
+  display: block;
+}
+
 .queueButton {
   display: none;
   padding: 0.2em;
   font-size: 1.3em;
-  width: auto 1.4em;
-  cursor: pointer;
-}
-
-.printerAddButton {
-  font-size: 2em !important;
-  margin-top: auto;
-  margin-bottom: 0.2em;
   cursor: pointer;
 }
 
 footer {
+  position: sticky;
+  top: 100vh;
   background-color: #ffffff;
   padding: 10px;
   width: 100%;
-  bottom: 0;
 }
 
 .contact {
@@ -354,8 +389,7 @@ footer {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 1.5em;
-  display: inline-block;
+  font-size: 1.4em;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;

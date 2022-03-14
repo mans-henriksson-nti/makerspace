@@ -9,8 +9,8 @@
 }
 
 :root {
-  --printer-status-vacant: rgb(38, 253, 18);
-  --printer-status-printing: rgb(255, 217, 0);
+  --printer-status-vacant: rgb(0, 255, 0);
+  --printer-status-printing: rgb(255, 255, 0);
   --printer-status-out-of-order: rgb(252, 65, 27);
 }
 
@@ -281,7 +281,7 @@ input {
 .printerStatus {
   font-size: 2em;
   font-weight: 500;
-  color: white;
+  color: black;
   width: 100%;
 }
 

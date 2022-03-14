@@ -64,7 +64,7 @@ function displayPrinter(printer, index) {
   newContainer.classList.add("printerContainer");
   newPrinter.append(newContainer);
 
-  let newStatus = document.createElement("div");
+  let newStatus = document.createElement("h1");
   newStatus.classList.add("printerStatus");
   switch (printer.status) {
     case 0:
@@ -85,12 +85,12 @@ function displayPrinter(printer, index) {
   }
   newContainer.append(newStatus);
 
-  let newName = document.createElement("h1");
+  let newName = document.createElement("h2");
   newName.classList.add("printerName");
   newName.innerHTML = printer.name;
   newContainer.append(newName);
 
-  let newType = document.createElement("h2");
+  let newType = document.createElement("h3");
   newType.classList.add("printerType");
   newType.innerHTML = printer.type;
   newContainer.append(newType);

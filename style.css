@@ -347,18 +347,7 @@ input {
   word-wrap: break-word;
 }
 
-@media (hover: none) {
-  .queueButton {
-    display: block !important;
-  }
-}
-
-.queueEntry:hover .queueButton{
-  display: block;
-}
-
 .queueButton {
-  display: none;
   padding: 0.2em;
   font-size: 1.3em;
   cursor: pointer;

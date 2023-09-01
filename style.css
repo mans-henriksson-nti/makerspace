@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  background-image: url("bakgrund.webp");
+  background-image: url("assets/bakgrund.webp");
   background-size: cover;
   height: 100%;
 }
